@@ -1,0 +1,13 @@
+<div class="main exhibit-index">
+  <div class="container">
+    <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        <div class="post-left">
+          <img src="<%= "/post_images/#{post.image_name}" %>">
+          <%= post.name%>
+          <%= link_to(post.comment, "/exhibit/#{post.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

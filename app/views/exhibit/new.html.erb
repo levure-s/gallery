@@ -1,0 +1,25 @@
+<div class="main exhibit-new">
+  <div class="container">
+    <h1 class="form-heading">投稿する</h1>
+    <%= form_tag("/exhibit/create", {multipart: true}) do %>
+      <div class="form">
+        <div class="form-body">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+
+          <p>タイトル</p>
+          <input name="title" >
+          <p>作品（写真）</p>
+          <input name="image" type="file">
+          <p>ニックネーム</p>
+          <input name="name" value="<%= @post.name %>">
+          <textarea name="comment"><%= @post.comment %></textarea>
+          <input type="submit" value="投稿">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
