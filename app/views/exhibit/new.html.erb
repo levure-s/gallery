@@ -4,12 +4,7 @@
     <%= form_tag("/exhibit/create", {multipart: true}) do %>
       <div class="form">
         <div class="form-body">
-          <% @post.errors.full_messages.each do |message| %>
-            <div class="form-error">
-              <%= message %>
-            </div>
-          <% end %>
-
+          
           <p>タイトル</p>
           <input name="title" >
           <p>作品（写真）</p>
