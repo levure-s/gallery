@@ -15,8 +15,8 @@
           <p>作品（写真）</p>
           <input name="image" type="file">
           <p>ニックネーム</p>
-          <input name="name" >
-          <textarea name="comment"></textarea>
+          <input name="name" value="<%= @post.name %>">
+          <textarea name="comment"><%= @post.comment %></textarea>
           <input type="submit" value="投稿">
         </div>
       </div>
